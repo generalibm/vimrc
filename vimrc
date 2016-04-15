@@ -2,21 +2,21 @@
 "----------------------------"
 "----------Vundle------------"
 "----------------------------"
-"set nocompatible
-"filetype off
+set nocompatible
+filetype off
 
 " set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
 
 " Let Vundle manage itself
-"Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
-"Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
 
-"call vundle#end()
-"filetype plugin indent on
+call vundle#end()
+filetype plugin indent on
 
 
 "let g:auto_save = 1
@@ -31,14 +31,14 @@
 "----------------------------"
 "--------    CtrlP    -------"
 "----------------------------"
-"let g:ctrlp_map = ',,'
-"let g:ctrlp_open_multiple_files = 'v'
+let g:ctrlp_map = ',,'
+let g:ctrlp_open_multiple_files = 'v'
 
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git)$',
-"  \ 'file': '\v\.(log|jpg|png|jpeg)$',
-"  \ }
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git)$',
+  \ 'file': '\v\.(log|jpg|png|jpeg)$',
+  \ }
 
 "----------------------------"
 "--------  pathogen   -------"
@@ -48,13 +48,13 @@
 "----------------------------"
 "--------  Syntastic  -------"
 "----------------------------"
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "----------------------------"
 "--------Global Config-------"
