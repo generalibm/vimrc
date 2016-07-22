@@ -13,13 +13,14 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
 
 
-"let g:auto_save = 1
+let g:auto_save = 1
 
 "----------------------------"
 "--------   NERDTree  -------"
@@ -40,21 +41,23 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(log|jpg|png|jpeg)$',
   \ }
 
-"----------------------------"
-"--------  pathogen   -------"
-"----------------------------"
-"execute pathogen#infect()
 
 "----------------------------"
 "--------  Syntastic  -------"
 "----------------------------"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let b:syntastic_cpp_cflags = '-std=c++11 -w'
+
+"----------------------------"
+"------ YouCompleteMe -------"
+"----------------------------"
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 "----------------------------"
 "--------Global Config-------"
@@ -111,4 +114,11 @@ function Addreadme()
 	call append(4, " ///")
 	call append(5, " ")
 	call append(6, "#include <iostream>")
+	call append(7, "using std::cout;")
+	call append(8, "using std::endl;")
 endf
+
+
+"set maplearder
+let  mapleader = ","
+map <silent> <leader>ee :!vim ~/.vimrc<cr>
